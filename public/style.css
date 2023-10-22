@@ -1,23 +1,28 @@
 body {
     font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f4f4f4;
 }
 
-.page-section {
-    padding: 20px;
-    margin: 20px 0;
-    border: 1px solid #ccc;
+.button-container {
+    text-align: center;
 }
 
-#section1 {
-    background-color: #e6f7ff;
+.transition-button {
+    display: block;
+    margin: 10px auto;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #3498db;
+    color: #ffffff;
+    cursor: pointer;
+    transition: background-color 0.3s;
 }
 
-#section2 {
-    background-color: #ffe6e6;
-}
-
-#section3 {
-    background-color: #e6ffe6;
+.transition-button:hover {
+    background-color: #2980b9;
 }

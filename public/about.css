@@ -1,0 +1,86 @@
+body {
+    background-color: #111;
+    font-family: 'Pixel', sans-serif;
+    color: #fff;
+    text-align: center;
+    overflow: hidden;
+}
+
+.container {
+    width: 80%;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #222;
+    position: relative;
+    border: 5px double #f06;
+    box-shadow: 0 0 20px #f06;
+}
+
+.blinking-title {
+    animation: blinker 1s linear infinite;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+@keyframes blinker {
+    50% {
+        opacity: 0;
+    }
+}
+
+.description {
+    margin-top: 20px;
+    font-size: 1.2rem;
+    border-top: 3px dotted #f06;
+    padding-top: 10px;
+}
+
+/* Retro corner designs */
+.container::before,
+.container::after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    background: #f06;
+    z-index: -1;
+}
+
+.container::before {
+    top: -10px;
+    left: -10px;
+    clip-path: polygon(0 0, 100% 0, 0 100%);
+}
+
+.container::after {
+    right: -10px;
+    bottom: -10px;
+    clip-path: polygon(100% 100%, 0 100%, 100% 0);
+}
+
+
+.button-container {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-around; /* Distributes the buttons with space in between */
+}
+
+.retro-button {
+    text-decoration: none;
+    font-family: 'Pixel', sans-serif;
+    font-size: 1.2rem;
+    background-color: #f06;
+    color: #fff;
+    padding: 10px 20px;
+    border: 3px double #fff;
+    box-shadow: 0 0 10px #f06;
+    transition: all 0.3s; /* Smoothens the hover effect */
+}
+
+.retro-button:hover {
+    background-color: #fff;
+    color: #f06;
+    border-color: #f06;
+    box-shadow: 0 0 15px #f06, 0 0 10px #f06 inset; /* Inset for inner glow */
+}

@@ -2,29 +2,43 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Static Website</title>
-    <link rel="stylesheet" href="style.css">
-    <script defer src="scripts/main.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link id = "stylesheet1" rel="stylesheet" href="styles1.css">
+    <link id = "stylesheet2" rel="stylesheet" href="styles2.css">
+    <script src="scripts/main.js" defer></script>
+    <title>navigation page</title>
 </head>
 <body>
-    <section id="section1" class="page-section">
-        <h1>Welcome to Section 1</h1>
-        <p>Content for section 1 goes here.</p>
-    </section>
+    <div class="container">
+        <h1>Choose your Controversy</h1>
+        <div class="buttons">
+            <a href="controvertial.html" class="btn neon-button">Adventure 1</a>
+            <a href="superhero-tax.html" class="btn neon-button">Adventure 2</a>
+            <a href="https://www.sephora.com/" class="btn neon-button" id="sephoraLink">Adventure 3</a>
+        </div>
+        <h1>About Me</h1>
+        <div class = "about-me"> 
+            <a href="about.html" class="btn neon-button">About Me</a>
+        </div>
+        <div class="container">
+            <h1>Time</h1>
+            <div id="clock" class="clock"></div>
+        </div>
+    </div>
+    <div class="">
+        <div class = "buttons switch-style">
+            <button id="switch-style" class="btn neon-button">surprise</button>
+        </div>
+    </div>
+    <div class="container">
+        <section id="counter" class="page-section">
+            <h1>Counter</h1>
+            <p>Count: <span id="count">0</span></p>
+        </section>
+    </div>
+    <script src="scripts/script.js"></script>
     
-    <section id="section2" class="page-section">
-        <h1>Welcome to Section 2</h1>
-        <p>Content for section 2 goes here.</p>
-    </section>
-    
-    <section id="section3" class="page-section">
-        <h1>Welcome to Section 3</h1>
-        <p>Content for section 3 goes here.</p>
-    </section>
-
-    <section id="counter" class="page-section">
-        <h1>Counter</h1>
-        <p>Count: <span id="count">0</span></p>
 </body>
 </html>
