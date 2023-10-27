@@ -1,0 +1,47 @@
+#canvasContainer {
+  display: block;
+  white-space: nowrap;
+  position: relative;
+}
+
+#gameCanvas1, #gameCanvas2 {
+  border: 10px solid black;
+  width: 735px;  /* Adjusted from 600px */
+  height: 530px;  /* Adjusted from 400px */
+  display: inline-block;
+  vertical-align: top;
+  align-items: center;
+  background-color: #87CEEB;
+  box-sizing: border-box;
+  position: relative;
+  z-index: 1;
+}
+
+#gameCanvas1::before, #gameCanvas2::before {
+  content: "";
+  position: absolute;
+  align-self: center;
+  top: -10px;
+  left: -10px;
+  right: -10px;
+  bottom: -10px;
+  z-index: -1;
+  background: linear-gradient(45deg, #ff0000, #00ff00, #0000ff, #ff00ff, #ff0000);
+  background-size: 400% 400%;
+  border-radius: 10px;
+  animation: gradient-border 5s linear infinite;
+}
+
+@keyframes gradient-border {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 100% 100%;
+  }
+}
+
+@font-face {
+  font-family: 'Press Start 2P';
+  src: url('path/to/PressStart2P-Regular.ttf') format('truetype');
+}

@@ -1,0 +1,13 @@
+#gameCanvas {
+    width: 800px;
+    height: 600px;
+    border: none;
+    display: block;
+    margin: 0 auto;
+    background-color: #87CEEB; /* Light blue sky color as a fallback */
+  }
+  
+  @font-face {
+    font-family: 'Press Start 2P';
+    src: url('path/to/PressStart2P-Regular.ttf') format('truetype');
+}

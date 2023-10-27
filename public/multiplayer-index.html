@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/game-index.css">
+    <title>multiplayer-index</title>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <canvas id="backgroundCanvas" width="800" height="600"></canvas>
+    <h1 id="gameTitle">Flappy Teacher</h1>
+    <h2 id="gameSubtitle">Choose your CS Teacher!</h2>
+    <div id="image-button-container">
+        <div class="image-button-pair">
+          <img alt="Game Image" id="gameImage1" style="width: 150px;height:200px;"/>
+          <button id="cycleButton1">Player 1</button>
+        </div>
+        <div class="image-button-pair">
+          <img alt="Game Image" id="gameImage2" style="width: 150px;height:200px;"/>
+          <button id="cycleButton2">Player 2</button>
+        </div>
+      </div>      
+    <div>
+        <button id="startGameMulti">Start Game</button>
+    </div>
+    <script src="scripts/multiplayer-index.js"></script>  
+</body>
+</html>
