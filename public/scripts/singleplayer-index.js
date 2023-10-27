@@ -31,7 +31,7 @@ class SinglePlayerIndex {
   
     init() {
       this.drawBackground();
-      document.getElementById('gameImage').src = this.images[this.currentImageIndex]; // Initialize with the first image
+      document.getElementById('gameImage').src = ("images/" + this.images[this.currentImageIndex]); // Initialize with the first image
     }
   }
   const gameIndex = new SinglePlayerIndex();

@@ -38,8 +38,8 @@ class SinglePlayerIndex {
   
     init() {
       this.drawBackground();
-      document.getElementById('gameImage1').src = this.images[this.currentImageIndex1];
-      document.getElementById('gameImage2').src = this.images[this.currentImageIndex2]; // Initialize with the first image
+      document.getElementById('gameImage1').src = ("images/" + this.images[this.currentImageIndex1]); 
+      document.getElementById('gameImage2').src = ("images/" + this.images[this.currentImageIndex2]); 
     }
   }
   const gameIndex = new SinglePlayerIndex();

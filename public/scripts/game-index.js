@@ -23,6 +23,10 @@ class GameIndex {
     window.location.href = 'multiplayer-index.html'; // Redirect to your game's HTML file
   }
 
+  goHome() {
+    window.location.href = 'index.html'; // Redirect to your game's HTML file
+  }
+
   startImageCycle() {
     setInterval(() => this.cycleImages(), 800);
   }
@@ -35,11 +39,12 @@ class GameIndex {
   addEventListeners() {
     document.getElementById('singleplayer').addEventListener('click', this.singleplayer.bind(this));
     document.getElementById('multiplayer').addEventListener('click', this.startMulti.bind(this));
+    document.getElementById('home').addEventListener('click', this.goHome.bind(this));
   }
 
   init() {
     this.drawBackground();
-    document.getElementById('gameImage').src = this.images[this.currentImageIndex]; // Initialize with the first image
+    document.getElementById('gameImage').src = ("images/" + this.images[this.currentImageIndex]); // Initialize with the first image
   }
 }
 const gameIndex = new GameIndex();

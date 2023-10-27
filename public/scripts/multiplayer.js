@@ -3,9 +3,6 @@ const ctx1 = canvas1.getContext('2d');
 const canvas2 = document.getElementById('gameCanvas2');
 const ctx2 = canvas2.getContext('2d');
 
-const background = new Image();
-background.src = 'images/background-image.png';
-
 const columns1 = [];
 const columns2 = [];
 const columnWidth = 40;
@@ -15,10 +12,22 @@ const columnInterval = 300;
 let scorePlayer1 = 0;
 let scorePlayer2 = 0;
 
+const background = {
+  image: new Image(),
+  x: 0,
+  speed: 0.5,
+};
 
-function drawBackground() {
-  ctx1.drawImage(background, 0, 0, canvas1.width, canvas1.height);
-  ctx2.drawImage(background, 0, 0, canvas2.width, canvas2.height);
+background.image.src = 'images/background-image.png'
+
+function drawBackground(canvas, ctx) {
+  ctx.drawImage(background.image, background.x, 0, canvas.width, canvas.height);
+  ctx.drawImage(background.image, background.x + canvas.width, 0, canvas.width, canvas.height);
+}
+
+function updateBackground(canvas) {
+  background.x -= background.speed;
+  if (background.x < -canvas.width) background.x = 0;
 }
 
 const player1 = {
@@ -180,7 +189,10 @@ function addColumnPair(canvas, columns) {
   function gameLoop1() {
     ctx1.clearRect(0, 0, canvas1.width, canvas1.height);
     ctx2.clearRect(0, 0, canvas2.width, canvas2.height);
-    drawBackground();
+    updateBackground(canvas1);
+    updateBackground(canvas2);
+    drawBackground(canvas1, ctx1);
+    drawBackground(canvas2, ctx2);
     drawPlayer(ctx1, player1);
     applyGravity(player1);
     drawColumns(ctx1, columns1);
