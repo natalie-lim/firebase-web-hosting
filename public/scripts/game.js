@@ -101,7 +101,6 @@ function updateColumns() {
           player.y < column.y + column.height &&
           player.y + player.height > column.y) {
             // Player hit the column
-            localStorage.setItem('score', score);
             window.location.href = 'game-over.html'; // Redirect to the other HTML page
         }
     
@@ -147,7 +146,6 @@ function drawScore() {
     ctx.strokeText(scoreText, x, y);
     ctx.fillText(scoreText, x, y);
 }
-
 
 function gameLoop() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
