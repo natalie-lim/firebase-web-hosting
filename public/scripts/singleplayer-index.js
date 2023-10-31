@@ -1,3 +1,4 @@
+
 class SinglePlayerIndex {
     constructor() {
       this.canvas = document.getElementById('backgroundCanvas');
