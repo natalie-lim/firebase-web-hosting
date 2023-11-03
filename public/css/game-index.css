@@ -32,7 +32,7 @@ body {
   margin-top: -300px;
 }
 
-#singleplayer, #multiplayer{
+#singleplayer, #multiplayer, #leaderboard{
   font-family: 'Press Start 2P', cursive;
   padding: 10px 20px;
   font-size: 18px;
@@ -80,7 +80,7 @@ body {
 }
 
 
-#singleplayer:hover, #multiplayer:hover {
+#singleplayer:hover, #multiplayer:hover, #leaderboard {
   transform: translateY(-2px);
   box-shadow: 0px 8px 10px rgba(0, 0, 0, 0.15);
 }
@@ -165,7 +165,7 @@ button:hover {
   box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.15);
 }
 
-#cycleButton1:hover, #cycleButton2:hover, #home:hover{
+#cycleButton1:hover, #cycleButton2:hover, #home:hover, #leaderboard:hover{
   box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.15);
 }
 

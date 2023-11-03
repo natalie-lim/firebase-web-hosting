@@ -16,6 +16,8 @@ class Leaderboard {
     this.leaderboardRef = this.db.collection('scores');
     this.scoresListElement = document.getElementById('scores-list');
     this.loadTopScores();
+    this.addEventListeners();
+    this.init();
   }
 
   async loadTopScores() {
@@ -33,8 +35,16 @@ class Leaderboard {
       console.error("Error getting documents: ", error);
     }
   }
+  goHome() {
+    // Redirect to the game page or home page
+    window.location.href = 'game-index.html'; // or your game's HTML file
+}
+  addEventListeners() {
+    document.getElementById('go-home').addEventListener('click', this.goHome.bind(this));
+}
 }
 
 document.getElementById('refresh-scores').addEventListener('click', () => {
   const leaderboard = new Leaderboard(firebase.firestore());
 });
+const leaderboard = new Leaderboard();
