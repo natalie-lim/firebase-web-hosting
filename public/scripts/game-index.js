@@ -27,6 +27,10 @@ class GameIndex {
     window.location.href = 'index.html'; // Redirect to your game's HTML file
   }
 
+  goToLeaderboard() {
+    window.location.href = 'leadership-board.html'; // Redirect to your game's HTML file
+  }
+
   startImageCycle() {
     setInterval(() => this.cycleImages(), 800);
   }
@@ -39,6 +43,7 @@ class GameIndex {
   addEventListeners() {
     document.getElementById('singleplayer').addEventListener('click', this.singleplayer.bind(this));
     document.getElementById('multiplayer').addEventListener('click', this.startMulti.bind(this));
+    document.getElementById('leaderboard').addEventListener('click', this.goToLeaderboard.bind(this));
     document.getElementById('home').addEventListener('click', this.goHome.bind(this));
   }
 

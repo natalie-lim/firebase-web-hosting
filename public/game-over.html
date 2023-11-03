@@ -10,9 +10,37 @@
 <body>
   <div class="game-over-container">
     <h1 class="game-over-title">Game Over</h1>
+    <!-- Existing content -->
     <p class="final-score">Final Score: <span id="score">0</span></p>
+
+    <!-- Add initials input and submit button -->
+    <div class="initials-container" style="padding-bottom: 2%;">
+        <label for="initials">Enter Your Initials (3 letters): </label>
+        <input type="text" id="initials" maxlength="3">
+    </div>
+    <button id="submit-score">Submit Score</button>
+
+    <!-- Area to show submission status to the user -->
+    <p id="submission-status"></p>
     <button id="try-again">Try Again</button>
-  </div>
-  <script src="scripts/game-over.js"></script>
+    <button id="leaderboard">Check Out Leaderboard!</button>
+</div>
+<script src="https://www.gstatic.com/firebasejs/10.5.0/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.5.0/firebase-firestore-compat.js"></script>
+<script>
+  const firebaseConfig = {
+    apiKey: "AIzaSyDVWLI_9t7OC_v1JAI1OaOn6dOiqDrFInQ",
+    authDomain: "firstwebdevproject.firebaseapp.com",
+    projectId: "firstwebdevproject",
+    storageBucket: "firstwebdevproject.appspot.com",
+    messagingSenderId: "765441582697",
+    appId: "1:765441582697:web:0cb1dbaf2c6df1780464f8",
+    measurementId: "G-PBXPC1531S"
+  };
+  const app = firebase.initializeApp(firebaseConfig);
+  this.db = app.firestore(app);
+</script>
+<script src="scripts/game-over.js" defer></script>
+
 </body>
 </html>

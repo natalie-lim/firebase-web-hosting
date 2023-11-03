@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Leaderboard</title>
+  <link rel="stylesheet" href="css/leadership-board.css">
+</head>
+<body>
+  <div class="leaderboard-container">
+    <h1 class="leaderboard-title">Leaderboard</h1>
+    <ul id="scores-list" class="scores-list">
+      <!-- Scores will be populated here by JavaScript -->
+    </ul>
+    <button id="refresh-scores">Refresh Scores</button>
+    </div>
+    <script src="https://www.gstatic.com/firebasejs/10.5.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.5.0/firebase-firestore-compat.js"></script>
+    <script>
+    const firebaseConfig = {
+        apiKey: "AIzaSyDVWLI_9t7OC_v1JAI1OaOn6dOiqDrFInQ",
+        authDomain: "firstwebdevproject.firebaseapp.com",
+        projectId: "firstwebdevproject",
+        storageBucket: "firstwebdevproject.appspot.com",
+        messagingSenderId: "765441582697",
+        appId: "1:765441582697:web:0cb1dbaf2c6df1780464f8",
+        measurementId: "G-PBXPC1531S"
+    };
+    const app = firebase.initializeApp(firebaseConfig);
+    this.db = app.firestore(app);
+</script>
+<script src="scripts/leadership-board.js"></script>
+</body>
+</html>

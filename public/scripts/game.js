@@ -10,7 +10,7 @@ function logCurrentImagePath() {
   
 const currentImagePath = "images/" + localStorage.getItem('currentImagePath');
 
-const gapSize = 260;
+const gapSize = 240;
 const columnWidth = 50;
 const minColumnHeight = 50;
 
@@ -121,7 +121,7 @@ function updateColumns() {
 
   // Add new columns
     const lastColumn = columns[columns.length - 1];
-    if (canvas.width - lastColumn.x > 500) { // 300px from the previous column
+    if (canvas.width - lastColumn.x > 300) { // 300px from the previous column
         addColumnPair();
       }
     }
